@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            Redirect YouTube to mobile
 // @namespace       AlejandroAkbal
-// @version         0.1
+// @version         0.2
 // @description     Redirects YouTube desktop to mobile.
 // @author          Alejandro Akbal
 // @icon            https://www.google.com/s2/favicons?sz=64&domain=youtube.com
@@ -14,20 +14,20 @@
 // ==/UserScript==
 
 (function() {
-    'use strict';
+    'use strict'
 
     const CURRENT_URL = window.location.href
 
-    const MOBILE_URL = new URL(CURRENT_URL);
+    const MOBILE_URL = new URL(CURRENT_URL)
 
     // Set the "m.youtube.com" subdomain
     MOBILE_URL.host = MOBILE_URL.host.replace('www.', 'm.')
 
     // Set app to mobile
-    MOBILE_URL.searchParams.set('app', 'm');
+    MOBILE_URL.searchParams.set('app', 'm')
 
     // Don't persist app
-    MOBILE_URL.searchParams.set('persist_app', '0');
+    MOBILE_URL.searchParams.set('persist_app', '0')
 
-    window.location.href = MOBILE_URL.toString()
+    window.location.assign(MOBILE_URL.toString())
 })();
