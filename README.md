@@ -2,6 +2,8 @@
 
 UserScript to redirect YouTube desktop to mobile. 
 
+Very handy for tablets like iPads where the mobile view in Safari of YouTube performs better.
+
 ## Usage
 
 1. Install [Tampermonkey](https://www.tampermonkey.net/) or any other UserScript manager.
